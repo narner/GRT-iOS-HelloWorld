@@ -276,6 +276,11 @@
 		E4065D8D1F44931800990FA4 /* Util.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065C831F44931800990FA4 /* Util.h */; };
 		E4065D8E1F44931800990FA4 /* WarningLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4065C841F44931800990FA4 /* WarningLog.cpp */; };
 		E4065D8F1F44931800990FA4 /* WarningLog.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065C851F44931800990FA4 /* WarningLog.h */; };
+		E4065D961F4498B200990FA4 /* BridgingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D911F4498B200990FA4 /* BridgingHeader.h */; };
+		E4065D971F4498B200990FA4 /* GestureRecognitionPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */; };
+		E4065D981F4498B200990FA4 /* GestureRecognitionPipeline.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */; };
+		E4065D991F4498B200990FA4 /* VectorDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D941F4498B200990FA4 /* VectorDouble.h */; };
+		E4065D9A1F4498B200990FA4 /* VectorDouble.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4065D951F4498B200990FA4 /* VectorDouble.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -561,6 +566,11 @@
 		E4065C831F44931800990FA4 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		E4065C841F44931800990FA4 /* WarningLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WarningLog.cpp; sourceTree = "<group>"; };
 		E4065C851F44931800990FA4 /* WarningLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningLog.h; sourceTree = "<group>"; };
+		E4065D911F4498B200990FA4 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognitionPipeline.h; sourceTree = "<group>"; };
+		E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GestureRecognitionPipeline.mm; sourceTree = "<group>"; };
+		E4065D941F4498B200990FA4 /* VectorDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorDouble.h; sourceTree = "<group>"; };
+		E4065D951F4498B200990FA4 /* VectorDouble.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorDouble.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -585,6 +595,7 @@
 		E4065B1B1F44930200990FA4 = {
 			isa = PBXGroup;
 			children = (
+				E4065D901F44985300990FA4 /* Objective-C Wrapper */,
 				E4065B3F1F44931800990FA4 /* GRT */,
 				E4065B271F44930300990FA4 /* GRTiOSFramework */,
 				E4065B321F44930300990FA4 /* GRTiOSFrameworkTests */,
@@ -1373,6 +1384,18 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		E4065D901F44985300990FA4 /* Objective-C Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E4065D911F4498B200990FA4 /* BridgingHeader.h */,
+				E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */,
+				E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */,
+				E4065D941F4498B200990FA4 /* VectorDouble.h */,
+				E4065D951F4498B200990FA4 /* VectorDouble.mm */,
+			);
+			name = "Objective-C Wrapper";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1396,6 +1419,7 @@
 				E4065CF81F44931800990FA4 /* ClassificationData.h in Headers */,
 				E4065D551F44931800990FA4 /* Cholesky.h in Headers */,
 				E4065CA61F44931800990FA4 /* GMM.h in Headers */,
+				E4065D961F4498B200990FA4 /* BridgingHeader.h in Headers */,
 				E4065CE41F44931800990FA4 /* Classifier.h in Headers */,
 				E4065D171F44931800990FA4 /* KMeansFeatures.h in Headers */,
 				E4065D561F44931800990FA4 /* CircularBuffer.h in Headers */,
@@ -1493,6 +1517,7 @@
 				E4065C941F44931800990FA4 /* BAG.h in Headers */,
 				E4065CDC1F44931800990FA4 /* PSOParticle.h in Headers */,
 				E4065D421F44931800990FA4 /* RMSFilter.h in Headers */,
+				E4065D971F4498B200990FA4 /* GestureRecognitionPipeline.h in Headers */,
 				E4065D4C1F44931800990FA4 /* LinearRegression.h in Headers */,
 				E4065CD51F44931800990FA4 /* LinearLeastSquares.h in Headers */,
 				E4065D3A1F44931800990FA4 /* LeakyIntegrator.h in Headers */,
@@ -1521,6 +1546,7 @@
 				E4065CA41F44931800990FA4 /* FSMParticleFilter.h in Headers */,
 				E4065D1D1F44931800990FA4 /* MovementTrajectoryFeatures.h in Headers */,
 				E4065D031F44931800990FA4 /* RegressionSample.h in Headers */,
+				E4065D991F4498B200990FA4 /* VectorDouble.h in Headers */,
 				E4065CA01F44931800990FA4 /* DTW.h in Headers */,
 				E4065C981F44931800990FA4 /* DecisionTreeClusterNode.h in Headers */,
 				E4065CA91F44931800990FA4 /* ContinuousHiddenMarkovModel.h in Headers */,
@@ -1681,6 +1707,7 @@
 				E4065CED1F44931800990FA4 /* GRTBase.cpp in Sources */,
 				E4065D891F44931800990FA4 /* TrainingLog.cpp in Sources */,
 				E4065C861F44931800990FA4 /* AdaBoost.cpp in Sources */,
+				E4065D981F4498B200990FA4 /* GestureRecognitionPipeline.mm in Sources */,
 				E4065D7B1F44931800990FA4 /* TestingLog.cpp in Sources */,
 				E4065CE51F44931800990FA4 /* Clusterer.cpp in Sources */,
 				E4065D1A1F44931800990FA4 /* MovementIndex.cpp in Sources */,
@@ -1691,6 +1718,7 @@
 				E4065C891F44931800990FA4 /* DecisionStump.cpp in Sources */,
 				E4065C911F44931800990FA4 /* ANBC_Model.cpp in Sources */,
 				E4065D311F44931800990FA4 /* Derivative.cpp in Sources */,
+				E4065D9A1F4498B200990FA4 /* VectorDouble.mm in Sources */,
 				E4065C8B1F44931800990FA4 /* RadialBasisFunction.cpp in Sources */,
 				E4065C9D1F44931800990FA4 /* DecisionTreeTripleFeatureNode.cpp in Sources */,
 				E4065D771F44931800990FA4 /* RangeTracker.cpp in Sources */,
