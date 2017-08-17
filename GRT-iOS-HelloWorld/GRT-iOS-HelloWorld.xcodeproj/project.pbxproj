@@ -14,6 +14,7 @@
 		E4C972E41F45DA0400406BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C972E21F45DA0400406BCF /* LaunchScreen.storyboard */; };
 		E4C972EF1F45DA0400406BCF /* GRT_iOS_HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972EE1F45DA0400406BCF /* GRT_iOS_HelloWorldTests.swift */; };
 		E4C972FA1F45DA0400406BCF /* GRT_iOS_HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972F91F45DA0400406BCF /* GRT_iOS_HelloWorldUITests.swift */; };
+		E4F7896D1F45ED1F00683570 /* GRTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F7895B1F45E7D900683570 /* GRTiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,20 @@
 			remoteGlobalIDString = E4C972D51F45DA0400406BCF;
 			remoteInfo = "GRT-iOS-HelloWorld";
 		};
+		E4F7895A1F45E7D900683570 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F789491F45E7D800683570 /* GRTiOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4065B251F44930300990FA4;
+			remoteInfo = GRTiOS;
+		};
+		E4F7895C1F45E7D900683570 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F789491F45E7D800683570 /* GRTiOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4065B2E1F44930300990FA4;
+			remoteInfo = GRTiOSTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +62,21 @@
 		E4C972F51F45DA0400406BCF /* GRT-iOS-HelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GRT-iOS-HelloWorldUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C972F91F45DA0400406BCF /* GRT_iOS_HelloWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRT_iOS_HelloWorldUITests.swift; sourceTree = "<group>"; };
 		E4C972FB1F45DA0400406BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F7892C1F45DB0500683570 /* GRTiOSFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRTiOSFramework.framework; path = "../GRTiOSFramework/build/Debug-iphoneos/GRTiOSFramework.framework"; sourceTree = "<group>"; };
+		E4F7892E1F45DCDA00683570 /* GRTiOSFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRTiOSFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/GRT-HelloWorld-gjbanovjypsdbdgdyuofejqirqpd/Build/Products/Debug-iphonesimulator/GRTiOSFramework.framework"; sourceTree = "<group>"; };
+		E4F789301F45DEAC00683570 /* GRTiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRTiOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/GRT-HelloWorld-gjbanovjypsdbdgdyuofejqirqpd/Build/Products/Debug-iphonesimulator/GRTiOS.framework"; sourceTree = "<group>"; };
+		E4F789371F45E2BE00683570 /* GRT-iOS-HelloWorld-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GRT-iOS-HelloWorld-Bridging-Header.h"; sourceTree = "<group>"; };
+		E4F789461F45E7D800683570 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		E4F789471F45E7D800683570 /* GestureRecognitionPipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureRecognitionPipeline.h; sourceTree = "<group>"; };
+		E4F789481F45E7D800683570 /* GestureRecognitionPipeline.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GestureRecognitionPipeline.mm; sourceTree = "<group>"; };
+		E4F789491F45E7D800683570 /* GRTiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GRTiOS.xcodeproj; sourceTree = "<group>"; };
+		E4F7894D1F45E7D900683570 /* GRTiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRTiOS.h; sourceTree = "<group>"; };
+		E4F7894E1F45E7D900683570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F789501F45E7D900683570 /* GRTiOSFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRTiOSFrameworkTests.swift; sourceTree = "<group>"; };
+		E4F789511F45E7D900683570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F789531F45E7D900683570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4F789561F45E7D900683570 /* VectorDouble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorDouble.h; sourceTree = "<group>"; };
+		E4F789571F45E7D900683570 /* VectorDouble.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorDouble.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F7896D1F45ED1F00683570 /* GRTiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +108,12 @@
 		E4C972CD1F45DA0400406BCF = {
 			isa = PBXGroup;
 			children = (
+				E4F789371F45E2BE00683570 /* GRT-iOS-HelloWorld-Bridging-Header.h */,
 				E4C972D81F45DA0400406BCF /* GRT-iOS-HelloWorld */,
 				E4C972ED1F45DA0400406BCF /* GRT-iOS-HelloWorldTests */,
 				E4C972F81F45DA0400406BCF /* GRT-iOS-HelloWorldUITests */,
 				E4C972D71F45DA0400406BCF /* Products */,
+				E4F7892B1F45DB0500683570 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +156,85 @@
 				E4C972FB1F45DA0400406BCF /* Info.plist */,
 			);
 			path = "GRT-iOS-HelloWorldUITests";
+			sourceTree = "<group>";
+		};
+		E4F7892B1F45DB0500683570 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4F789451F45E7D800683570 /* GRTiOSFramework */,
+				E4F789301F45DEAC00683570 /* GRTiOS.framework */,
+				E4F7892E1F45DCDA00683570 /* GRTiOSFramework.framework */,
+				E4F7892C1F45DB0500683570 /* GRTiOSFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4F789451F45E7D800683570 /* GRTiOSFramework */ = {
+			isa = PBXGroup;
+			children = (
+				E4F789461F45E7D800683570 /* BridgingHeader.h */,
+				E4F789471F45E7D800683570 /* GestureRecognitionPipeline.h */,
+				E4F789481F45E7D800683570 /* GestureRecognitionPipeline.mm */,
+				E4F789491F45E7D800683570 /* GRTiOS.xcodeproj */,
+				E4F7894C1F45E7D900683570 /* GRTiOSFramework */,
+				E4F7894F1F45E7D900683570 /* GRTiOSFrameworkTests */,
+				E4F789521F45E7D900683570 /* iOS-GRT-HelloWorld */,
+				E4F789541F45E7D900683570 /* iOS-GRT-HelloWorldTests */,
+				E4F789551F45E7D900683570 /* iOS-GRT-HelloWorldUITests */,
+				E4F789561F45E7D900683570 /* VectorDouble.h */,
+				E4F789571F45E7D900683570 /* VectorDouble.mm */,
+			);
+			name = GRTiOSFramework;
+			path = ../GRTiOSFramework;
+			sourceTree = "<group>";
+		};
+		E4F7894A1F45E7D800683570 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4F7895B1F45E7D900683570 /* GRTiOS.framework */,
+				E4F7895D1F45E7D900683570 /* GRTiOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4F7894C1F45E7D900683570 /* GRTiOSFramework */ = {
+			isa = PBXGroup;
+			children = (
+				E4F7894D1F45E7D900683570 /* GRTiOS.h */,
+				E4F7894E1F45E7D900683570 /* Info.plist */,
+			);
+			path = GRTiOSFramework;
+			sourceTree = "<group>";
+		};
+		E4F7894F1F45E7D900683570 /* GRTiOSFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4F789501F45E7D900683570 /* GRTiOSFrameworkTests.swift */,
+				E4F789511F45E7D900683570 /* Info.plist */,
+			);
+			path = GRTiOSFrameworkTests;
+			sourceTree = "<group>";
+		};
+		E4F789521F45E7D900683570 /* iOS-GRT-HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				E4F789531F45E7D900683570 /* Assets.xcassets */,
+			);
+			path = "iOS-GRT-HelloWorld";
+			sourceTree = "<group>";
+		};
+		E4F789541F45E7D900683570 /* iOS-GRT-HelloWorldTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "iOS-GRT-HelloWorldTests";
+			sourceTree = "<group>";
+		};
+		E4F789551F45E7D900683570 /* iOS-GRT-HelloWorldUITests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "iOS-GRT-HelloWorldUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +330,12 @@
 			mainGroup = E4C972CD1F45DA0400406BCF;
 			productRefGroup = E4C972D71F45DA0400406BCF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4F7894A1F45E7D800683570 /* Products */;
+					ProjectRef = E4F789491F45E7D800683570 /* GRTiOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E4C972D51F45DA0400406BCF /* GRT-iOS-HelloWorld */,
@@ -226,6 +344,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4F7895B1F45E7D900683570 /* GRTiOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRTiOS.framework;
+			remoteRef = E4F7895A1F45E7D900683570 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4F7895D1F45E7D900683570 /* GRTiOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GRTiOSTests.xctest;
+			remoteRef = E4F7895C1F45E7D900683570 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E4C972D41F45DA0400406BCF /* Resources */ = {
@@ -418,6 +553,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "embodiedMediaSystems.GRT-iOS-HelloWorld";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GRT-iOS-HelloWorld-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -430,6 +566,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "embodiedMediaSystems.GRT-iOS-HelloWorld";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GRT-iOS-HelloWorld-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -507,6 +644,7 @@
 				E4C973001F45DA0400406BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4C973011F45DA0400406BCF /* Build configuration list for PBXNativeTarget "GRT-iOS-HelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +653,7 @@
 				E4C973031F45DA0400406BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4C973041F45DA0400406BCF /* Build configuration list for PBXNativeTarget "GRT-iOS-HelloWorldUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +662,7 @@
 				E4C973061F45DA0400406BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

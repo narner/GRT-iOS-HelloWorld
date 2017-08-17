@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GRTiOSFramework/GRTiOSFramework.xcodeproj">
+      location = "group:/Users/nicholasarner/Development/MyRepos/GRT-iOS-HelloWorld/GRTiOSFramework/GRTiOS.xcodeproj">
    </FileRef>
    <FileRef
       location = "container:GRT-iOS-HelloWorld/GRT-iOS-HelloWorld.xcodeproj">

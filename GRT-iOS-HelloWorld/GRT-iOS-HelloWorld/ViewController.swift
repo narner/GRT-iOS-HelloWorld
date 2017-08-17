@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import GRTiOS
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Creating a test object from the framework
+        
+        let pipeline = GestureRecognitionPipeline()
     }
 
     override func didReceiveMemoryWarning() {
