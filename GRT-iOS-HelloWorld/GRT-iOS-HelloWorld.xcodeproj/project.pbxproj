@@ -15,6 +15,7 @@
 		E4C972EF1F45DA0400406BCF /* GRT_iOS_HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972EE1F45DA0400406BCF /* GRT_iOS_HelloWorldTests.swift */; };
 		E4C972FA1F45DA0400406BCF /* GRT_iOS_HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972F91F45DA0400406BCF /* GRT_iOS_HelloWorldUITests.swift */; };
 		E4F7896D1F45ED1F00683570 /* GRTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F7895B1F45E7D900683570 /* GRTiOS.framework */; };
+		E4F789791F460C5C00683570 /* GRTiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F7895B1F45E7D900683570 /* GRTiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,28 @@
 			remoteGlobalIDString = E4065B2E1F44930300990FA4;
 			remoteInfo = GRTiOSTests;
 		};
+		E4F7897A1F460C5C00683570 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4F789491F45E7D800683570 /* GRTiOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4065B241F44930300990FA4;
+			remoteInfo = GRTiOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4F7897C1F460C5D00683570 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E4F789791F460C5C00683570 /* GRTiOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E4C972D61F45DA0400406BCF /* GRT-iOS-HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GRT-iOS-HelloWorld.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,10 +269,12 @@
 				E4C972D21F45DA0400406BCF /* Sources */,
 				E4C972D31F45DA0400406BCF /* Frameworks */,
 				E4C972D41F45DA0400406BCF /* Resources */,
+				E4F7897C1F460C5D00683570 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E4F7897B1F460C5C00683570 /* PBXTargetDependency */,
 			);
 			name = "GRT-iOS-HelloWorld";
 			productName = "GRT-iOS-HelloWorld";
@@ -427,6 +451,11 @@
 			isa = PBXTargetDependency;
 			target = E4C972D51F45DA0400406BCF /* GRT-iOS-HelloWorld */;
 			targetProxy = E4C972F61F45DA0400406BCF /* PBXContainerItemProxy */;
+		};
+		E4F7897B1F460C5C00683570 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GRTiOS;
+			targetProxy = E4F7897A1F460C5C00683570 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
