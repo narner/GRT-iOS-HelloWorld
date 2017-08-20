@@ -79,9 +79,9 @@ private:
     delete self.nsLogStream;
 }
 
-- (BOOL)load:(NSString *) path
-{
-    BOOL result = self.instance->load(std::string(path.UTF8String));
+- (BOOL)load:(NSURL *) url {
+
+    BOOL result = self.instance->load(std::string([url fileSystemRepresentation]));
     
     if (result) {
         std::cout << "GRT config";

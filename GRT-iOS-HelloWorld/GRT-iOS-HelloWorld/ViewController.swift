@@ -15,9 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //Creating a test object from the framework
-        
-        let pipeline = GestureRecognitionPipeline()
+        loadTrainingData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +23,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func loadTrainingData(){
+        
+        let path = Bundle.main.url(forResource: "Pipeline", withExtension: "grt")
+        
+        let pipeline = GestureRecognitionPipeline()
+        let test:Bool = pipeline.load(path)
+        print(test)
+    }
+ 
 
 }
 

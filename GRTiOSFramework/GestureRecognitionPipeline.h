@@ -15,7 +15,7 @@
 @property (readonly, getter=predictedClassLabel) NSUInteger predictedClassLabel;
 @property (readonly, getter=maximumLikelihood) double maximumLikelihood;
 
-- (BOOL)load:(NSString *) path;
+- (BOOL)load:(NSURL *) url;
 - (BOOL)predict:(VectorDouble *) inputVector;
 
 @end

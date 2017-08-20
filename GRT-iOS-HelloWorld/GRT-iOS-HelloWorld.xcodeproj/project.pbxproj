@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4508C181F4A19BB002C7CCC /* Pipeline.grt in Resources */ = {isa = PBXBuildFile; fileRef = E4508C171F4A19BB002C7CCC /* Pipeline.grt */; };
 		E4C972DA1F45DA0400406BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972D91F45DA0400406BCF /* AppDelegate.swift */; };
 		E4C972DC1F45DA0400406BCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972DB1F45DA0400406BCF /* ViewController.swift */; };
 		E4C972DF1F45DA0400406BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C972DD1F45DA0400406BCF /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E4508C171F4A19BB002C7CCC /* Pipeline.grt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pipeline.grt; sourceTree = "<group>"; };
 		E4C972D61F45DA0400406BCF /* GRT-iOS-HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GRT-iOS-HelloWorld.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C972D91F45DA0400406BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4C972DB1F45DA0400406BCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		E4C972D81F45DA0400406BCF /* GRT-iOS-HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				E4508C171F4A19BB002C7CCC /* Pipeline.grt */,
 				E4C972D91F45DA0400406BCF /* AppDelegate.swift */,
 				E4C972DB1F45DA0400406BCF /* ViewController.swift */,
 				E4C972DD1F45DA0400406BCF /* Main.storyboard */,
@@ -329,6 +332,7 @@
 				TargetAttributes = {
 					E4C972D51F45DA0400406BCF = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MCCU4CZ5B9;
 						ProvisioningStyle = Automatic;
 					};
 					E4C972E91F45DA0400406BCF = {
@@ -391,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4508C181F4A19BB002C7CCC /* Pipeline.grt in Resources */,
 				E4C972E41F45DA0400406BCF /* LaunchScreen.storyboard in Resources */,
 				E4C972E11F45DA0400406BCF /* Assets.xcassets in Resources */,
 				E4C972DF1F45DA0400406BCF /* Main.storyboard in Resources */,
@@ -578,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MCCU4CZ5B9;
 				INFOPLIST_FILE = "GRT-iOS-HelloWorld/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "embodiedMediaSystems.GRT-iOS-HelloWorld";
@@ -591,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MCCU4CZ5B9;
 				INFOPLIST_FILE = "GRT-iOS-HelloWorld/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "embodiedMediaSystems.GRT-iOS-HelloWorld";
