@@ -79,18 +79,5 @@ private:
     delete self.nsLogStream;
 }
 
-- (BOOL)load:(NSString *) path
-{
-    BOOL result = self.instance->load(std::string(path.UTF8String));
-    
-    if (result) {
-        std::cout << "GRT config";
-        std::cout << self.instance->getModelAsString();
-        std::cout << "GRT info: " << self.instance->getInfo();
-    }
-    
-    return result;
-}
-
 
 @end

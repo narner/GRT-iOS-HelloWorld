@@ -10,6 +10,4 @@
 
 @interface GestureRecognitionPipeline : NSObject
 
-- (BOOL)load:(NSString *) path;
-
 @end
