@@ -279,8 +279,6 @@
 		E4065D961F4498B200990FA4 /* BridgingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D911F4498B200990FA4 /* BridgingHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4065D971F4498B200990FA4 /* GestureRecognitionPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4065D981F4498B200990FA4 /* GestureRecognitionPipeline.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */; };
-		E4065D991F4498B200990FA4 /* VectorDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D941F4498B200990FA4 /* VectorDouble.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4065D9A1F4498B200990FA4 /* VectorDouble.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4065D951F4498B200990FA4 /* VectorDouble.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -569,8 +567,6 @@
 		E4065D911F4498B200990FA4 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognitionPipeline.h; sourceTree = "<group>"; };
 		E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GestureRecognitionPipeline.mm; sourceTree = "<group>"; };
-		E4065D941F4498B200990FA4 /* VectorDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorDouble.h; sourceTree = "<group>"; };
-		E4065D951F4498B200990FA4 /* VectorDouble.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorDouble.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1391,8 +1387,6 @@
 				E4065D911F4498B200990FA4 /* BridgingHeader.h */,
 				E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */,
 				E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */,
-				E4065D941F4498B200990FA4 /* VectorDouble.h */,
-				E4065D951F4498B200990FA4 /* VectorDouble.mm */,
 			);
 			name = "Objective-C Wrapper";
 			sourceTree = "<group>";
@@ -1406,7 +1400,6 @@
 			files = (
 				E4065CD61F44931800990FA4 /* MeanShift.h in Headers */,
 				E4065CC71F44931800990FA4 /* GaussianMixtureModels.h in Headers */,
-				E4065D991F4498B200990FA4 /* VectorDouble.h in Headers */,
 				E4065D2A1F44931800990FA4 /* ClassLabelChangeFilter.h in Headers */,
 				E4065CE81F44931800990FA4 /* Context.h in Headers */,
 				E4065D281F44931800990FA4 /* GRT.h in Headers */,
@@ -1719,7 +1712,6 @@
 				E4065C891F44931800990FA4 /* DecisionStump.cpp in Sources */,
 				E4065C911F44931800990FA4 /* ANBC_Model.cpp in Sources */,
 				E4065D311F44931800990FA4 /* Derivative.cpp in Sources */,
-				E4065D9A1F4498B200990FA4 /* VectorDouble.mm in Sources */,
 				E4065C8B1F44931800990FA4 /* RadialBasisFunction.cpp in Sources */,
 				E4065C9D1F44931800990FA4 /* DecisionTreeTripleFeatureNode.cpp in Sources */,
 				E4065D771F44931800990FA4 /* RangeTracker.cpp in Sources */,

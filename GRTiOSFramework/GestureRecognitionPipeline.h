@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "VectorDouble.h"
-
 @interface GestureRecognitionPipeline : NSObject
 
 @property (readonly, getter=predictedClassLabel) NSUInteger predictedClassLabel;
