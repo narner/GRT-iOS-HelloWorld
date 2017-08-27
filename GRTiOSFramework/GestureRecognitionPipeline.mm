@@ -9,12 +9,13 @@
 
 #ifdef __cplusplus
 #include "GRT.h"
+#include <math.h>
+#include <cmath>
 #endif
 
 #import "GestureRecognitionPipeline.h"
 
-class NSLogStream: public std::streambuf
-{
+class NSLogStream: public std::streambuf {
 public:
     NSLogStream(std::ostream& stream) :
     orgStream(stream)
@@ -28,8 +29,7 @@ public:
     }
     
 protected:
-    int_type overflow(int_type c)
-    {
+    int_type overflow(int_type c) {
         if(!traits_type::eq_int_type(c, traits_type::eof()))
         {
             char_type const t = traits_type::to_char_type(c);
@@ -38,8 +38,7 @@ protected:
         return !traits_type::eof();
     }
     
-    int sync()
-    {
+    int sync() {
         return 0;
     }
     
@@ -56,30 +55,48 @@ private:
 
 @interface GestureRecognitionPipeline()
 @property GRT::GestureRecognitionPipeline *instance;
+@property GRT::ClassificationData *classificationData;
+@property GRT::ClassificationData *trainingData;
+@property GRT::VectorFloat *sampleData;
+
 @property NSLogStream *nsLogStream;
 @end
 
 @implementation GestureRecognitionPipeline
 
-- (instancetype)init
-{
+
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.instance = new GRT::GestureRecognitionPipeline;
-        
+        self.classificationData = new GRT::ClassificationData;
+        self.trainingData = new GRT::ClassificationData;
+        [self setClassifier];
         // Redirect cout to NSLog
         self.nsLogStream = new NSLogStream(std::cout);
     }
     return self;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     delete self.instance;
     delete self.nsLogStream;
 }
 
-- (BOOL)load:(NSURL *) url {
+//// pipeline configuration
+- (void)setClassifier {
+    GRT::RandomForests classifier;
+    self.instance->setClassifier(classifier);
+    self.classificationData->setNumDimensions(3);
+}
+
+//// save and load pipeline
+- (BOOL)savePipeline:(NSURL *)url {
+    BOOL result = self.instance->savePipelineToFile(std::string([url fileSystemRepresentation]));
+    return result;
+}
+
+- (BOOL)loadPipeline:(NSURL *)url {
 
     BOOL result = self.instance->load(std::string([url fileSystemRepresentation]));
     
@@ -92,18 +109,56 @@ private:
     return result;
 }
 
-- (NSUInteger)predictedClassLabel
-{
+////   and load classification data
+- (BOOL)saveClassificationData:(NSURL *)url {
+    
+    BOOL result = self.classificationData->save(std::string([url fileSystemRepresentation]));
+    
+    return result;
+}
+
+- (BOOL)loadClassificationData:(NSURL *)url {
+    
+    BOOL result = self.classificationData->load(std::string([url fileSystemRepresentation]));    
+    return result;
+}
+
+- (void)addSamplesToClassificationDataForGesture:(NSUInteger)gesture :(VectorFloat*)vectorData {
+    
+    self.classificationData->addSample(gesture, *[vectorData cppInstance]);
+}
+
+- (BOOL)trainPipeline {
+    *self.trainingData = self.classificationData->split(80);
+    BOOL trainSuccess = self.instance->train( *(self.trainingData) );
+
+    std::cout << "STATS " << self.classificationData->getStatsAsString();
+
+    
+    GRT::TestResult testResults = self.instance->getTestResults();
+    
+    std::cout << "Pipeline Test Accuracy: " << self.instance->getTestAccuracy() << std::endl;
+
+    
+    GRT::Vector< GRT::UINT > classLabels = self.instance->getClassLabels();
+
+    std::cout << "Precision: ";
+    for (GRT::UINT k=0; k<self.instance->getNumClassesInModel(); k++) {
+        std::cout << "\t" << self.instance->getTestPrecision(classLabels[k]);
+    }std::cout << std::endl;
+
+    return trainSuccess;
+}
+
+- (NSUInteger)predictedClassLabel {
     return self.instance->getPredictedClassLabel();
 }
 
-- (double)maximumLikelihood
-{
+- (double)maximumLikelihood {
     return self.instance->getMaximumLikelihood();
 }
 
-- (BOOL)predict:(VectorDouble *) inputVector
-{
+- (BOOL)predict:(VectorDouble *) inputVector {
     return self.instance->predict(*[inputVector cppInstance]);
 }
 

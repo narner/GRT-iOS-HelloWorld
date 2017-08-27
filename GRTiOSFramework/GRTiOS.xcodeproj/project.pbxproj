@@ -279,6 +279,10 @@
 		E4065D961F4498B200990FA4 /* BridgingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D911F4498B200990FA4 /* BridgingHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4065D971F4498B200990FA4 /* GestureRecognitionPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4065D981F4498B200990FA4 /* GestureRecognitionPipeline.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */; };
+		E41951FD1F4B6B7C0016E511 /* VectorDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = E41951FB1F4B6B7C0016E511 /* VectorDouble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41951FE1F4B6B7C0016E511 /* VectorDouble.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41951FC1F4B6B7C0016E511 /* VectorDouble.mm */; };
+		E44B69851F4D052A00C42FD6 /* VectorFloat.mm in Sources */ = {isa = PBXBuildFile; fileRef = E44B69841F4D052A00C42FD6 /* VectorFloat.mm */; };
+		E44B69871F4DAE9400C42FD6 /* VectorFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = E44B69861F4D056B00C42FD6 /* VectorFloat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -567,6 +571,10 @@
 		E4065D911F4498B200990FA4 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognitionPipeline.h; sourceTree = "<group>"; };
 		E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GestureRecognitionPipeline.mm; sourceTree = "<group>"; };
+		E41951FB1F4B6B7C0016E511 /* VectorDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorDouble.h; sourceTree = "<group>"; };
+		E41951FC1F4B6B7C0016E511 /* VectorDouble.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorDouble.mm; sourceTree = "<group>"; };
+		E44B69841F4D052A00C42FD6 /* VectorFloat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorFloat.mm; sourceTree = "<group>"; };
+		E44B69861F4D056B00C42FD6 /* VectorFloat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorFloat.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1387,6 +1395,10 @@
 				E4065D911F4498B200990FA4 /* BridgingHeader.h */,
 				E4065D921F4498B200990FA4 /* GestureRecognitionPipeline.h */,
 				E4065D931F4498B200990FA4 /* GestureRecognitionPipeline.mm */,
+				E41951FB1F4B6B7C0016E511 /* VectorDouble.h */,
+				E41951FC1F4B6B7C0016E511 /* VectorDouble.mm */,
+				E44B69861F4D056B00C42FD6 /* VectorFloat.h */,
+				E44B69841F4D052A00C42FD6 /* VectorFloat.mm */,
 			);
 			name = "Objective-C Wrapper";
 			sourceTree = "<group>";
@@ -1399,8 +1411,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4065CD61F44931800990FA4 /* MeanShift.h in Headers */,
+				E44B69871F4DAE9400C42FD6 /* VectorFloat.h in Headers */,
+				E41951FD1F4B6B7C0016E511 /* VectorDouble.h in Headers */,
 				E4065CC71F44931800990FA4 /* GaussianMixtureModels.h in Headers */,
 				E4065D2A1F44931800990FA4 /* ClassLabelChangeFilter.h in Headers */,
+				E4065D0D1F44931800990FA4 /* VectorFloat.h in Headers */,
 				E4065CE81F44931800990FA4 /* Context.h in Headers */,
 				E4065D281F44931800990FA4 /* GRT.h in Headers */,
 				E4065D591F44931800990FA4 /* CommandLineParser.h in Headers */,
@@ -1482,7 +1497,6 @@
 				E4065D0A1F44931800990FA4 /* UnlabelledData.h in Headers */,
 				E4065D881F44931800990FA4 /* TrainingDataRecordingTimer.h in Headers */,
 				E4065D701F44931800990FA4 /* MinMax.h in Headers */,
-				E4065D0D1F44931800990FA4 /* VectorFloat.h in Headers */,
 				E4065CA71F44931800990FA4 /* MixtureModel.h in Headers */,
 				E4065CE61F44931800990FA4 /* Clusterer.h in Headers */,
 				E4065C901F44931800990FA4 /* ANBC.h in Headers */,
@@ -1712,6 +1726,7 @@
 				E4065C891F44931800990FA4 /* DecisionStump.cpp in Sources */,
 				E4065C911F44931800990FA4 /* ANBC_Model.cpp in Sources */,
 				E4065D311F44931800990FA4 /* Derivative.cpp in Sources */,
+				E41951FE1F4B6B7C0016E511 /* VectorDouble.mm in Sources */,
 				E4065C8B1F44931800990FA4 /* RadialBasisFunction.cpp in Sources */,
 				E4065C9D1F44931800990FA4 /* DecisionTreeTripleFeatureNode.cpp in Sources */,
 				E4065D771F44931800990FA4 /* RangeTracker.cpp in Sources */,
@@ -1742,6 +1757,7 @@
 				E4065CDD1F44931800990FA4 /* PrincipalComponentAnalysis.cpp in Sources */,
 				E4065D451F44931800990FA4 /* WeightedAverageFilter.cpp in Sources */,
 				E4065CF71F44931800990FA4 /* ClassificationData.cpp in Sources */,
+				E44B69851F4D052A00C42FD6 /* VectorFloat.mm in Sources */,
 				E4065C8F1F44931800990FA4 /* ANBC.cpp in Sources */,
 				E4065CCE1F44931800990FA4 /* Gate.cpp in Sources */,
 				E4065CC11F44931800990FA4 /* SwipeDetector.cpp in Sources */,
