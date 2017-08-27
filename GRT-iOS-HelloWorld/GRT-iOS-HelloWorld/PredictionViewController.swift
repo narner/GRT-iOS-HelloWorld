@@ -42,14 +42,17 @@ class PredictionViewController: UIViewController {
         let classificationDataResult:Bool = pipeline!.loadClassificationData(classificiationDataURL)
         
         if pipelineResult == false {
-            //present alert saying pipeline couldn't load file
             let userAlert = UIAlertController(title: "Error", message: "Couldn't load pipeline", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            userAlert.addAction(cancel)
             self.present(userAlert, animated: true, completion: { _ in })
         }
         
         if classificationDataResult == false {
             let userAlert = UIAlertController(title: "Error", message: "Couldn't load classification data", preferredStyle: .alert)
             self.present(userAlert, animated: true, completion: { _ in })
+            let cancel = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            userAlert.addAction(cancel)
         }
         
         else if (classificationDataResult && pipelineResult) {
@@ -66,8 +69,10 @@ class PredictionViewController: UIViewController {
             self.vector.pushBack(z)
             self.pipeline?.predict(self.vector)
 
-            let predictedClass = String(describing: self.pipeline?.predictedClassLabel .hashValue)
-            self.predictedGestureLabel.text = predictedClass
+            DispatchQueue.main.async {
+                self.predictedGestureLabel.text = String(describing: self.pipeline?.predictedClassLabel ?? 0)
+            }
+            
             print("PRECITED CLASS", self.pipeline?.predictedClassLabel ?? 0);
         }
     }
