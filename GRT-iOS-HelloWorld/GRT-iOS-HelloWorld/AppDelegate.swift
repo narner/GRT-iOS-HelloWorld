@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
+        //Create an instance of a gesture recognition pipeline to be used as a global variable, accesible by both our training and prediction view controllers
         self.pipeline = GestureRecognitionPipeline()
         
         return true

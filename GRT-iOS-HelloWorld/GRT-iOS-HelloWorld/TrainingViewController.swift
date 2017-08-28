@@ -26,7 +26,6 @@ class TrainingViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        
         trainButton.addTarget(self, action:#selector(TrainBtnPressed(_:)), for: .touchDown);
         trainButton.addTarget(self, action:#selector(TrainBtnReleased(_:)), for: .touchUpInside);
         
@@ -44,6 +43,7 @@ class TrainingViewController: UIViewController {
         
         accelerometerManager.start({ (x, y, z) -> Void in
             
+            //Add the accellerometer data to a vector, which is how we'll store the classification data
             let vector = VectorFloat()
             vector.clear()
             vector.pushBack(x)
@@ -53,7 +53,7 @@ class TrainingViewController: UIViewController {
             print("x", x)
             print("y", y)
             print("z", z)
-            print("gesture class is %@", gestureClass);
+            print("Gesture class is %@", gestureClass);
             self.pipeline!.addSamplesToClassificationData(forGesture: UInt(gestureClass), vector)
         })
     }
@@ -63,14 +63,12 @@ class TrainingViewController: UIViewController {
         accelerometerManager.stop()
     }
     
-    
     @IBAction func savePipeline(_ sender: Any) {
-        //set path for saving the pipeline to
+        // Set URL for saving the pipeline to
         let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                
         let pipelineURL = documentsUrl.appendingPathComponent("train.grt")
         
-        // Remove if already existing
+        // Remove the pipeline if it already exists
         let _ = try? FileManager.default.removeItem(at: pipelineURL)
 
         let pipelineSaveResult = self.pipeline?.save(pipelineURL)
@@ -80,9 +78,8 @@ class TrainingViewController: UIViewController {
             let cancel = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
             userAlert.addAction(cancel)
         }
-    
         
-        //save the training data
+        // Save the training data as a CSV file
         let classificiationDataURL = documentsUrl.appendingPathComponent("trainingData.csv")
 
         let _ = try? FileManager.default.removeItem(at: classificiationDataURL)

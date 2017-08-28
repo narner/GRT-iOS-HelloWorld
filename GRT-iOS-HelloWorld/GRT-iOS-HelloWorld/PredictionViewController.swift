@@ -33,6 +33,8 @@ class PredictionViewController: UIViewController {
     }
     
     func initPipeline(){
+        
+        //Load the GRT pipeline and the training data files from the documents directory
         let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
         let pipelineURL = documentsUrl.appendingPathComponent("train.grt")
@@ -55,6 +57,7 @@ class PredictionViewController: UIViewController {
             userAlert.addAction(cancel)
         }
         
+        //If the files have been loaded successfully, we can train the pipeline, and then start real-time gesture prediction
         else if (classificationDataResult && pipelineResult) {
             pipeline?.train()
             performGesturePrediction()
@@ -67,13 +70,14 @@ class PredictionViewController: UIViewController {
             self.vector.pushBack(x)
             self.vector.pushBack(y)
             self.vector.pushBack(z)
+            //Use the incoming accellerometer data to predict what the performed gesture class is
             self.pipeline?.predict(self.vector)
 
             DispatchQueue.main.async {
                 self.predictedGestureLabel.text = String(describing: self.pipeline?.predictedClassLabel ?? 0)
             }
             
-            print("PRECITED CLASS", self.pipeline?.predictedClassLabel ?? 0);
+            print("PRECITED GESTURE", self.pipeline?.predictedClassLabel ?? 0);
         }
     }
 
