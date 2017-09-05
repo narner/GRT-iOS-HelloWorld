@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E41951F91F4B6AEE0016E511 /* AcceleremoterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41951F81F4B6AEE0016E511 /* AcceleremoterManager.swift */; };
+		E4775E7A1F5EF5D500D306FD /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4775E791F5EF5D500D306FD /* TrainingViewController.swift */; };
 		E488D4A21F4C8DD2004A5CC6 /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488D4A11F4C8DD2004A5CC6 /* PredictionViewController.swift */; };
+		E4AB6D371F5EF38A00917F2B /* AcceleremoterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB6D361F5EF38A00917F2B /* AcceleremoterManager.swift */; };
 		E4C972DA1F45DA0400406BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972D91F45DA0400406BCF /* AppDelegate.swift */; };
-		E4C972DC1F45DA0400406BCF /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C972DB1F45DA0400406BCF /* TrainingViewController.swift */; };
 		E4C972DF1F45DA0400406BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C972DD1F45DA0400406BCF /* Main.storyboard */; };
 		E4C972E11F45DA0400406BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C972E01F45DA0400406BCF /* Assets.xcassets */; };
 		E4C972E41F45DA0400406BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C972E21F45DA0400406BCF /* LaunchScreen.storyboard */; };
@@ -72,12 +72,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E41951F81F4B6AEE0016E511 /* AcceleremoterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AcceleremoterManager.swift; path = ../../../../../Downloads/WatchGRT/WatchGRT/WatchGRT/AcceleremoterManager.swift; sourceTree = "<group>"; };
 		E41951FF1F4B6D3E0016E511 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		E4775E791F5EF5D500D306FD /* TrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		E488D4A11F4C8DD2004A5CC6 /* PredictionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
+		E4AB6D361F5EF38A00917F2B /* AcceleremoterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AcceleremoterManager.swift; path = ../AcceleremoterManager.swift; sourceTree = "<group>"; };
 		E4C972D61F45DA0400406BCF /* GRT-iOS-HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GRT-iOS-HelloWorld.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C972D91F45DA0400406BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4C972DB1F45DA0400406BCF /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		E4C972DE1F45DA0400406BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4C972E01F45DA0400406BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4C972E31F45DA0400406BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,10 +155,10 @@
 		E4C972D81F45DA0400406BCF /* GRT-iOS-HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				E41951F81F4B6AEE0016E511 /* AcceleremoterManager.swift */,
-				E4C972DB1F45DA0400406BCF /* TrainingViewController.swift */,
 				E488D4A11F4C8DD2004A5CC6 /* PredictionViewController.swift */,
+				E4775E791F5EF5D500D306FD /* TrainingViewController.swift */,
 				E4C972D91F45DA0400406BCF /* AppDelegate.swift */,
+				E4AB6D361F5EF38A00917F2B /* AcceleremoterManager.swift */,
 				E4C972DD1F45DA0400406BCF /* Main.storyboard */,
 				E4C972E01F45DA0400406BCF /* Assets.xcassets */,
 				E4C972E21F45DA0400406BCF /* LaunchScreen.storyboard */,
@@ -425,9 +425,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4C972DC1F45DA0400406BCF /* TrainingViewController.swift in Sources */,
 				E488D4A21F4C8DD2004A5CC6 /* PredictionViewController.swift in Sources */,
-				E41951F91F4B6AEE0016E511 /* AcceleremoterManager.swift in Sources */,
+				E4AB6D371F5EF38A00917F2B /* AcceleremoterManager.swift in Sources */,
+				E4775E7A1F5EF5D500D306FD /* TrainingViewController.swift in Sources */,
 				E4C972DA1F45DA0400406BCF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
