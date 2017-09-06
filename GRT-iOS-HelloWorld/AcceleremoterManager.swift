@@ -21,17 +21,15 @@ class AccelerometerManager {
     }
     
     func start(accHandler: @escaping (_ x: Double, _ y: Double, _ z: Double) -> Void) {
-        let handler: CMAccelerometerHandler  = {(data: CMAccelerometerData?, error: NSError?) -> Void in
+        let handler: CMAccelerometerHandler  = {(data: CMAccelerometerData?, error: Error?) -> Void in
             guard let acceleration = data?.acceleration else {
                 print("Error: data is nil: \(String(describing: error))")
                 return
             }
             
             accHandler(acceleration.x, acceleration.y, acceleration.z)
-        } as! CMAccelerometerHandler
-        
+        } 
         motionManager.startAccelerometerUpdates(to: motionQueue, withHandler: handler)
-        
     }
     
     func stop() {
