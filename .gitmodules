@@ -1,3 +1,6 @@
 [submodule "grt"]
 	path = grt
 	url = https://github.com/nickgillian/grt.git
+[submodule "SwiftR"]
+	path = SwiftR
+	url = https://github.com/kalanyuz/SwiftR.git

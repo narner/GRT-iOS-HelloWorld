@@ -8,11 +8,18 @@
 
 import UIKit
 import GRTiOS
+import SwiftR
 
 class TrainingViewController: UIViewController {
 
     @IBOutlet var gestureSelector: UISegmentedControl!
     @IBOutlet var trainButton: UIButton!
+    @IBOutlet weak var graphView: SRMergePlotView! {
+        didSet {
+            graphView.title = "Accelerometer Data"
+            graphView.totalSecondsToDisplay = 0.5
+        }
+    }
     
     fileprivate let accelerometerManager = AccelerometerManager()
     fileprivate var currentFilePath: String!
@@ -20,6 +27,9 @@ class TrainingViewController: UIViewController {
     
     var trainButtonSelected:Bool = false
     var pipeline: GestureRecognitionPipeline?
+
+    fileprivate var anotherDataTimer: Timer?
+    var count = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +39,8 @@ class TrainingViewController: UIViewController {
         trainButton.addTarget(self, action:#selector(TrainBtnPressed(_:)), for: .touchDown);
         trainButton.addTarget(self, action:#selector(TrainBtnReleased(_:)), for: .touchUpInside);
         
+        graphView.totalChannelsToDisplay = 3
+
         //Create an instance of a GRT pipeline
         self.pipeline = appDelegate.pipeline!
     }
@@ -55,6 +67,7 @@ class TrainingViewController: UIViewController {
             print("z", z)
             print("Gesture class is %@", gestureClass);
             self.pipeline!.addSamplesToClassificationData(forGesture: UInt(gestureClass), vector)
+    
         })
     }
     
