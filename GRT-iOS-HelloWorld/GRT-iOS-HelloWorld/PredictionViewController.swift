@@ -7,9 +7,9 @@
 //  Copyright © 2017 Nicholas Arner. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import GRTiOS
+import SwiftR
 
 class PredictionViewController: UIViewController {
     
@@ -17,6 +17,13 @@ class PredictionViewController: UIViewController {
     @IBOutlet var gestureTwoCountLabel: UILabel! 
     @IBOutlet var gestureThreeCountLabel: UILabel!
     
+    @IBOutlet weak var graphView: SRMergePlotView! {
+        didSet {
+            graphView.title = "Accelerometer Data"
+            graphView.totalSecondsToDisplay = 0.5
+        }
+    }
+
     var gestureOneCount: UInt = 0
     var gestureTwoCount: UInt = 0
     var gestureThreeCount: UInt = 0
@@ -33,6 +40,7 @@ class PredictionViewController: UIViewController {
         self.pipeline = appDelegate.pipeline!
 
         initPipeline()
+        graphView.totalChannelsToDisplay = 3
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,7 +91,9 @@ class PredictionViewController: UIViewController {
             DispatchQueue.main.async {
                 self.updateGestureCountLabels(gesture: (self.pipeline?.predictedClassLabel)!)
                 print("PRECITED GESTURE", self.pipeline?.predictedClassLabel ?? 0);
+                self.graphView.addData([x, y, z])
             }
+            
         }
     }
     
