@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w49-Mz-zk6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w49-Mz-zk6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,17 +107,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQT-8n-dcS">
-                                <rect key="frame" x="54" y="242" width="288" height="173"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="173" id="sPU-rA-ebU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gesture 1 Count: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-uH-nzZ">
+                                <rect key="frame" x="132" y="408" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predicted Gesture:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POB-rW-4O6">
-                                <rect key="frame" x="47" y="197" width="144" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gesture 3 Count: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0T-DC-xvK">
+                                <rect key="frame" x="132" y="564" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gesture 2 Count: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVF-pL-39m">
+                                <rect key="frame" x="132" y="486" width="135" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -125,25 +128,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bQT-8n-dcS" firstAttribute="top" secondItem="POB-rW-4O6" secondAttribute="bottom" constant="24" id="0KO-Oj-NaL"/>
-                            <constraint firstItem="AYq-lj-ikU" firstAttribute="top" secondItem="o8p-ZS-D3m" secondAttribute="bottom" constant="33" id="4A8-Mf-06g"/>
-                            <constraint firstItem="o8p-ZS-D3m" firstAttribute="top" secondItem="r0Y-bG-Byz" secondAttribute="bottom" constant="24" id="E1O-ZE-HsS"/>
-                            <constraint firstItem="POB-rW-4O6" firstAttribute="top" secondItem="AYq-lj-ikU" secondAttribute="bottom" constant="78" id="HIo-DL-znt"/>
-                            <constraint firstItem="o8p-ZS-D3m" firstAttribute="centerX" secondItem="AYq-lj-ikU" secondAttribute="centerX" id="KCn-pD-C8S"/>
-                            <constraint firstItem="POB-rW-4O6" firstAttribute="leading" secondItem="w3a-y6-biW" secondAttribute="leadingMargin" constant="31" id="k0Y-Pz-ofy"/>
-                            <constraint firstItem="bQT-8n-dcS" firstAttribute="leading" secondItem="w3a-y6-biW" secondAttribute="leadingMargin" constant="38" id="qaH-Bc-f9s"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bQT-8n-dcS" secondAttribute="trailing" constant="17" id="u0H-aW-OrL"/>
-                            <constraint firstItem="o8p-ZS-D3m" firstAttribute="centerX" secondItem="w3a-y6-biW" secondAttribute="centerX" id="uGu-52-VBy"/>
+                            <constraint firstItem="o8p-ZS-D3m" firstAttribute="centerX" secondItem="AYq-lj-ikU" secondAttribute="centerX" id="2ld-FQ-AnG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qqw-uH-nzZ" secondAttribute="trailing" constant="92" id="4J9-gF-a9L"/>
+                            <constraint firstItem="o8p-ZS-D3m" firstAttribute="centerX" secondItem="w3a-y6-biW" secondAttribute="centerX" id="64c-e7-grZ"/>
+                            <constraint firstItem="1k4-i3-gtd" firstAttribute="top" secondItem="p0T-DC-xvK" secondAttribute="bottom" constant="33" id="Hg4-K5-7dj"/>
+                            <constraint firstItem="o8p-ZS-D3m" firstAttribute="top" secondItem="r0Y-bG-Byz" secondAttribute="bottom" constant="24" id="QX6-Mk-NrO"/>
+                            <constraint firstItem="p0T-DC-xvK" firstAttribute="top" secondItem="kVF-pL-39m" secondAttribute="bottom" constant="57" id="XgE-cU-Zd5"/>
+                            <constraint firstItem="qqw-uH-nzZ" firstAttribute="leading" secondItem="kVF-pL-39m" secondAttribute="leading" id="auM-6x-S7r"/>
+                            <constraint firstItem="qqw-uH-nzZ" firstAttribute="trailing" secondItem="kVF-pL-39m" secondAttribute="trailing" id="eFM-qu-DHZ"/>
+                            <constraint firstItem="AYq-lj-ikU" firstAttribute="top" secondItem="o8p-ZS-D3m" secondAttribute="bottom" constant="33" id="k0z-PA-zVj"/>
+                            <constraint firstItem="kVF-pL-39m" firstAttribute="top" secondItem="qqw-uH-nzZ" secondAttribute="bottom" constant="57" id="kUF-kz-N3M"/>
+                            <constraint firstItem="kVF-pL-39m" firstAttribute="leading" secondItem="p0T-DC-xvK" secondAttribute="leading" id="vpR-rN-Ada"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Prediction" id="udn-RR-bKb"/>
                     <connections>
-                        <outlet property="predictedGestureLabel" destination="bQT-8n-dcS" id="ReX-sn-ZEf"/>
+                        <outlet property="gestureOneCountLabel" destination="qqw-uH-nzZ" id="nM2-xm-9gP"/>
+                        <outlet property="gestureThreeCountLabel" destination="p0T-DC-xvK" id="YaY-O7-RXY"/>
+                        <outlet property="gestureTwoCountLabel" destination="kVF-pL-39m" id="mbz-ZP-Upv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdT-W2-H9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2030" y="825"/>
+            <point key="canvasLocation" x="2029.5999999999999" y="824.43778110944538"/>
         </scene>
         <!--GRT on iOS-->
         <scene sceneID="0bh-Wf-JLS">

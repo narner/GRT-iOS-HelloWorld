@@ -13,7 +13,14 @@ import GRTiOS
 
 class PredictionViewController: UIViewController {
     
-    @IBOutlet var predictedGestureLabel: UILabel!
+    @IBOutlet var gestureOneCountLabel: UILabel!
+    @IBOutlet var gestureTwoCountLabel: UILabel! 
+    @IBOutlet var gestureThreeCountLabel: UILabel!
+    
+    var gestureOneCount: UInt = 0
+    var gestureTwoCount: UInt = 0
+    var gestureThreeCount: UInt = 0
+    
     fileprivate let accelerometerManager = AccelerometerManager()
 
     var currentClassLabel = 0 as UInt
@@ -74,11 +81,30 @@ class PredictionViewController: UIViewController {
             self.pipeline?.predict(self.vector)
 
             DispatchQueue.main.async {
-                self.predictedGestureLabel.text = String(describing: self.pipeline?.predictedClassLabel ?? 0)
+                self.updateGestureCountLabels(gesture: (self.pipeline?.predictedClassLabel)!)
+                print("PRECITED GESTURE", self.pipeline?.predictedClassLabel ?? 0);
             }
-            
-            print("PRECITED GESTURE", self.pipeline?.predictedClassLabel ?? 0);
         }
+    }
+    
+    func updateGestureCountLabels(gesture: UInt){
+        
+        if gesture == 0 {
+            //do nothing
+        } else if (gesture == 1){
+            gestureOneCount = gestureOneCount + 1
+            let gestureOneCountVal = String(gestureOneCount)
+            gestureOneCountLabel.text = ("Gesture 1 count: " + gestureOneCountVal)
+        } else if (gesture == 2){
+            gestureTwoCount = gestureTwoCount + 1
+            let gestureTwoCountVal = String(gestureTwoCount)
+            gestureTwoCountLabel.text = ("Gesture 2 count: " + gestureTwoCountVal)
+        } else if (gesture == 3){
+            gestureThreeCount = gestureThreeCount + 1
+            let gestureThreeCountVal = String(gestureThreeCount)
+            gestureThreeCountLabel.text = ("Gesture 3 count: " + gestureThreeCountVal)
+        }
+        
     }
 
 }

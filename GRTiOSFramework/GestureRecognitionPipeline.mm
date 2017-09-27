@@ -88,7 +88,7 @@ private:
     GRT::RandomForests classifier;
     self.instance->setClassifier(classifier);
     classifier.enableNullRejection(true);
-    self.instance->addPostProcessingModule(GRT::ClassLabelTimeoutFilter(1000, GRT::ClassLabelTimeoutFilter::ALL_CLASS_LABELS));
+    self.instance->addPostProcessingModule(GRT::ClassLabelTimeoutFilter(500, GRT::ClassLabelTimeoutFilter::ALL_CLASS_LABELS));
     self.classificationData->setNumDimensions(3);
 }
 
