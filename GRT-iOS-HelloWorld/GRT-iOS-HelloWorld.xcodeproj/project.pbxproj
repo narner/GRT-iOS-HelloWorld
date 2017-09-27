@@ -160,8 +160,8 @@
 		E4C972D81F45DA0400406BCF /* GRT-iOS-HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				E488D4A11F4C8DD2004A5CC6 /* PredictionViewController.swift */,
 				E4775E791F5EF5D500D306FD /* TrainingViewController.swift */,
+				E488D4A11F4C8DD2004A5CC6 /* PredictionViewController.swift */,
 				E4C972D91F45DA0400406BCF /* AppDelegate.swift */,
 				E4AB6D361F5EF38A00917F2B /* AcceleremoterManager.swift */,
 				E4C972DD1F45DA0400406BCF /* Main.storyboard */,

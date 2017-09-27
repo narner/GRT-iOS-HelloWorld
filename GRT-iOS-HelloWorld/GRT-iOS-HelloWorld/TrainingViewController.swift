@@ -29,7 +29,6 @@ class TrainingViewController: UIViewController {
     var pipeline: GestureRecognitionPipeline?
 
     fileprivate var anotherDataTimer: Timer?
-    var count = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +44,17 @@ class TrainingViewController: UIViewController {
         self.pipeline = appDelegate.pipeline!
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        startAccellerometer()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         accelerometerManager.stop()
     }
     
-    func TrainBtnPressed(_ sender: Any) {
-        trainButton.isSelected = true
+    func startAccellerometer() {
         let gestureClass = self.gestureSelector.selectedSegmentIndex
-        
+
         accelerometerManager.start( accHandler: { (x, y, z) -> Void in
             
             //Add the accellerometer data to a vector, which is how we'll store the classification data
@@ -66,15 +68,23 @@ class TrainingViewController: UIViewController {
             print("y", y)
             print("z", z)
             print("Gesture class is %@", gestureClass);
-            self.pipeline!.addSamplesToClassificationData(forGesture: UInt(gestureClass), vector)
-    
+            self.graphView.addData([x, y, z])
+            
+            if (self.trainButton.isSelected == true) {
+                self.pipeline!.addSamplesToClassificationData(forGesture: UInt(gestureClass), vector)
+            }
+
         })
+    }
+    
+    func TrainBtnPressed(_ sender: Any) {
+        trainButton.isSelected = true
     }
     
     func TrainBtnReleased(_ sender: Any) {
         trainButton.isSelected = false
-        accelerometerManager.stop()
     }
+  
     
     @IBAction func savePipeline(_ sender: Any) {
         // Set URL for saving the pipeline to
