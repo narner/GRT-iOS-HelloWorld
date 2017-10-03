@@ -53,10 +53,10 @@ class TrainingViewController: UIViewController {
     }
     
     func startAccellerometer() {
-        let gestureClass = self.gestureSelector.selectedSegmentIndex
 
         accelerometerManager.start( accHandler: { (x, y, z) -> Void in
-            
+            let gestureClass = self.gestureSelector.selectedSegmentIndex
+
             //Add the accellerometer data to a vector, which is how we'll store the classification data
             let vector = VectorFloat()
             vector.clear()
