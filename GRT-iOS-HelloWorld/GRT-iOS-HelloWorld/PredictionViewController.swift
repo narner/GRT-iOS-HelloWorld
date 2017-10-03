@@ -45,6 +45,16 @@ class PredictionViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         accelerometerManager.stop()
+        resetGestureCount()
+    }
+    
+    func resetGestureCount() {
+        gestureOneCountLabel.text = "Gesture 1 count: "
+        gestureTwoCountLabel.text = "Gesture 2 count: "
+        gestureThreeCountLabel.text = "Gesture 3 count: "
+        gestureOneCount = 0
+        gestureTwoCount = 0
+        gestureThreeCount = 0
     }
     
     func initPipeline(){
