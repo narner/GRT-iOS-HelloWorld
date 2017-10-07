@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "container:GRT-iOS-HelloWorld/GRT-iOS-HelloWorld.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:/Users/nicholasarner/Development/MyRepos/GRT-iOS-HelloWorld/GRTiOSFramework/GRTiOS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:GRT-iOS-HelloWorld/GRT-iOS-HelloWorld.xcodeproj">
+      location = "group:SwiftR/SwiftR.xcodeproj">
    </FileRef>
 </Workspace>
