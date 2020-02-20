@@ -19,9 +19,6 @@ recognize:
 [SwiftR](https://github.com/kalanyuz/SwiftR) is used for visualizing 
 the acellerometer data. 
 
-If you'd like help with using the GRT in your Swift project, I can be 
-reached at nicholasarner (at) gmail (dot) com.
-
 
 ## NOTE:
 Since I worked on this project, there's been a lot of advancemenrts in [Apple's CoreML framework](https://developer.apple.com/documentation/coreml), including the ability to [create Motion Activity Classifiers using CreateML](https://developer.apple.com/videos/play/wwdc2019/426/). If you're looking to create a gestural recognition system for iOS from scratch, I would recommend taking a look at the linked Apple talk. 
